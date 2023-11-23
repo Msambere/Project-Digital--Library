@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="java.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Project: Library</title>
+</head>
+<body>
+    <div class="header">
+      <h1 class="title">Welcome to my library!</h1>
+    </div>
+
+    <dialog class="modal" id="newBookDialog">
+        <form method="dialog" id="myform">
+            <div class="form-row">
+              <label for="book-title">*Title of the book:</label>
+              <input type="text" name="title" id="book-title" required>
+            </div>
+            <div class="form-row">
+              <label for="book-author">*Author of the book:</label>
+              <input type="text" name="author" id="book-author" required>
+            </div>
+            <div class="form-row">
+              <label for="book-numPages">*Number of Pages</label>
+              <input type="text" name="numPages" id="book-numPages" pattern="^[0-9]*$">
+            </div>
+            <div class="form-row">
+              <label for="book-status">*Current Status:</label>
+              <select id="book-status" name="status" required>
+                  <option value="default">Choose…</option>
+                  <option>read</option>
+                  <option>reading</option>
+                  <option>yet to read</option>
+              </select>
+            </div>
+          <div class="form-buttons">
+            <button id='cancelBtn' value="cancel" formmethod="dialog">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </div>
+        </form>
+    </dialog>
+    <dialog class="modal" id="bookInfoDialog">
+      <p id="expandedInfo"></p>
+      <button id="closeBtn">Close</button>
+    </dialog>
+    <div class="book-shelf">
+      <div class="book-list"></div>
+    </div>
+    <button class="new-book-button" id="showDialog">ADD NEW BOOK</button>
+</body>
+</html>

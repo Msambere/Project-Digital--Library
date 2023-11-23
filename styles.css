@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 24px;
+
+}
+
+
+body{
+    background-color: rgb(218, 216, 216);
+}
+
+.header{
+    background-color: white;
+    box-shadow: .5em .5rem .5rem rgb(48, 47, 47);
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.modal{
+    width: 33vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    border: 1px solid #D6D9dc;
+    border-radius: 8px;
+}
+
+::backdrop {
+    background-image: linear-gradient(45deg, rgb(87, 85, 87),rgb(192, 194, 192));
+    opacity:.75;
+}
+
+form{
+    margin: 20px;
+}
+
+.form-row{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column ;
+    flex-wrap: wrap;
+}
+
+.form-row input[type='text'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: .7rem;
+  }
+
+  .form-row label {
+    margin-bottom: 10px;
+  }
+
+  .form-row select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: .7rem;            
+    -webkit-appearance: none;
+  }
+  .form-buttons{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+
+  .form-buttons button, .new-book-button, #closeBtn {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color:#5e5f61 ;
+  
+    border: none;
+    border-radius: 8px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  .form-buttons button:hover, .new-book-button:hover, #closeBtn:hover {
+    background-color: #d7dbdf;
+  }
+  
+  .form-buttons button:active, .new-book-button:active, #closeBtn:active {
+    background-color: #b6babe;
+  }
+
+.book-shelf{
+    background-color: rgb(83, 40, 15);
+    display: grid;
+    grid-template: 30px 1fr 30px / 30px 1fr 30px;
+    margin: 10px;
+
+}
+
+.book-list{
+    height: 500px;
+    grid-area: 2 / 2/ 3 / 3;
+    background-color: rgb(41, 20, 7);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+
+
+img { /* has to come before .book style or it doesn't work, why?*/
+    height: 25px;
+}
+
+
+.book{ 
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.book-title{
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding: 20px 8px;
+    color: white;
+    font-size: 1.5rem;
+    
+    max-height: 456px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-container{
+    background-color: rgba(255, 255, 255, .25)
+}
+
+.new-book-button{
+    margin: 10px;
+    font-size: 1rem;
+}
+
+#closeBtn{
+    margin: 10px;
+}
+
+#expandedInfo{
+    padding: 10px;
+}
