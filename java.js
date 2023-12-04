@@ -1,6 +1,19 @@
 const myLibrary = [];
 const shelf =document.querySelector('.book-list');
 
+class Book{
+    constructor(title, author, numPages, status){
+        this.title = title;
+        this.author = author;
+        this.numPages = numPages;
+        this.status = status;
+        this.info = function(){
+        return (`${this.title} by ${this.author} is ${this.numPages} pages long. Status: ${this.status}`);
+        };
+    };
+};
+
+
 const book1 = new Book("8 rules of love", "Jay Shetty","300", "reading");
 myLibrary.push(book1);
 const book2 = new Book("The Way of Kings", "Brandon Sanderson","987", "read");
@@ -42,16 +55,6 @@ closeBtn.addEventListener("click", () => {
 
 
 //Functions 
-function Book(title, author, numPages, status){
-    this.title = title;
-    this.author = author;
-    this.numPages = numPages;
-    this.status = status;
-    this.info = function(){
-       return (`${this.title} by ${this.author} is ${this.numPages} pages long. Status: ${this.status}`);
-    };
-};
-
 function populateShelf(){
     //Sort books alphabetically
     sortAlphabetically(myLibrary);
